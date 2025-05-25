@@ -90,15 +90,15 @@ WHERE sightings.species_id IS NULL;
 
 --! Problem 6️⃣ Show the most recent 2 sightings.
 SELECT common_name,sighting_time,name FROM sightings
-JOIN rangers ON sightings.sighting_id = rangers.ranger_id
+FULL JOIN rangers ON sightings.sighting_id = rangers.ranger_id
 JOIN species ON rangers.ranger_id = species.species_id
-ORDER BY sightings.sighting_time
+ORDER BY sightings.sighting_time DESC
 LIMIT 2
 
 --! Problem 7️⃣ Update all species discovered before year 1800 to have status 'Historic'.
 UPDATE species
 SET conservation_status = 'Historic'
-WHERE discovery_date < '1800-01-01';
+WHERE discovery_data < '1800-01-01';
 
 SELECT * FROM species;
 
