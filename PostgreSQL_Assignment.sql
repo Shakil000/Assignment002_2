@@ -29,7 +29,7 @@ CREATE TABLE sightings(
     note TEXT
 );
 
---! Insert data to Rangers Table---------
+--? Insert data to Rangers Table---------
 
 INSERT INTO rangers(name,region)
 VALUES
@@ -39,7 +39,7 @@ VALUES
 
 SELECT * from rangers;
 
---! Insert data to Species Table---------
+--? Insert data to Species Table---------
 
 INSERT INTO species(common_name,scientific_name,discovery_data,conservation_status)
 VALUES
@@ -50,7 +50,7 @@ VALUES
 
 SELECT * FROM species;
 
---! Insert data to Sightings Table---------
+--? Insert data to Sightings Table---------
 
 INSERT INTO sightings(ranger_id,species_id,location,sighting_time,note)
 VALUES
@@ -60,3 +60,11 @@ VALUES
 (1, 2, 'Snowfall Pass', '2024-05-18 18:30:00', NULL);
 
 SELECT * from sightings;
+
+--! Problem 1️⃣ Register a new ranger with provided data with name = 'Derek Fox' and region = 'Coastal Plains'
+
+INSERT INTO rangers(name, region)
+VALUES
+('Derek Fox','Coastal Plains');
+
+
