@@ -68,3 +68,5 @@ VALUES
 ('Derek Fox','Coastal Plains');
 
 
+--! Problem 2️⃣ Count unique species ever sighted.
+SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
