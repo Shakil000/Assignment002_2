@@ -93,7 +93,7 @@ SELECT common_name,sighting_time,name FROM sightings
 FULL JOIN rangers ON sightings.sighting_id = rangers.ranger_id
 JOIN species ON rangers.ranger_id = species.species_id
 ORDER BY sightings.sighting_time DESC
-LIMIT 2
+LIMIT 2;
 
 --! Problem 7️⃣ Update all species discovered before year 1800 to have status 'Historic'.
 UPDATE species
